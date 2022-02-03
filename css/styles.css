@@ -3,7 +3,8 @@ body, html {
     margin: 0;
     width: 100vw;
     /* height: 400rem; */
-    font-family: Helvetica, Arial, sans-serif
+    font-family: Helvetica, Arial, sans-serif;
+    /* font-family: 'Gidugu', sans-serif; */
 }
 
 img {
@@ -11,6 +12,11 @@ img {
     height: 100%;
     object-fit: contain;
 }
+
+/* #logoName {
+    background-image: url("../images/Nicholas-Love.svg");
+    repeat: no-repeat;
+} */
 
 /* .imgLogo {
     min-width: 4rem;
@@ -21,10 +27,16 @@ img {
     min-height: 2rem;
 } */
 
+a {
+    color: rgba(0, 0, 0, 0.7)
+}
+
+i {
+    color: black;
+}
 
 
 /* Navigation CSS */
-
 .navTop{
     /* background-color: whitesmoke; */
     /* height: 8.5rem; */
@@ -58,7 +70,7 @@ img {
 }
 
 .left {
-    /* width: 33vw; */
+    width: 33vw;
     justify-content: left;
 }
 .right {
@@ -89,8 +101,8 @@ img {
 
 
 
-/* Hero Section CSS */
 
+/* Hero Section CSS */
 .rectangle {
     background-color: #D06969;
     position: absolute;
@@ -108,13 +120,51 @@ img {
     display: flex;
     background-image: linear-gradient(180deg, whitesmoke, #d0696969);
     height: 576px;
-    width: 100%;
+    width: 100vw;
 }
 
 
 
-/* Cards CSS */
 
+/* About Me page CSS */
+.gradientTopaboutMe {
+    display: flex;
+    background-image: linear-gradient(180deg, whitesmoke, #d0696969);
+    height: 100vh;
+    width: 100vw;
+    /* z-index: -1; */
+}
+
+.rectangleBlackBlur {
+    background-color: #00000070;
+    position: absolute;
+    position: top;
+    /* margin-right: 13.5%; */
+    margin-top: 5rem;
+    width: 100vw;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* z-index: -1; */
+}
+
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* margin-left: 13.5%; */
+    margin-top: 5rem;
+    width: 50vw;
+    height: 36rem;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+
+
+
+
+/* Cards CSS */
 .cardImgContainer {
     display:flex;
     flex-direction: row;
@@ -172,6 +222,9 @@ img {
     background-color: #fff6f0;
 }
 
+
+
+
 /* Project CSS */
 .projectDescription {
     display: flex;
@@ -179,6 +232,9 @@ img {
     left: 14.5%;
     width: 73vw;
 }
+
+
+
 
 
 /* Button CSS */
@@ -200,10 +256,13 @@ button:hover {
 }
 
 
+
+
+
 /* Footer CSS */
 .footerNav {
     position: relative;
-    margin-top: 48px;
+    margin-top: 2rem;
     background-color: #d06969;
     height: 5.1rem;
     width: 100vw;
@@ -212,10 +271,32 @@ button:hover {
 .footerNavItems {
     display: flex;
     flex-direction: row;
-    position: relative;
     /* justify-content: space-between; */
-    margin-left: 234px;
+    position: relative;
+    margin-top: 1rem;
 }
+
+.footerLHS {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 1rem;
+    /* justify-content: space-between; */
+    margin-left: 200px;
+
+    /* flex-direction: flex-start; */
+}
+.footerRHS {
+    /* display: flex;
+    flex-direction: row-reverse;
+    position: relative; */
+    /* margin-top: 1rem; */
+    /* justify-content: space-between; */
+    margin-right: 200px;
+}
+
+
+
 
 /* Project Template CSS */
 .headingTitle, .contentDesignProcess {
@@ -233,7 +314,7 @@ button:hover {
 .bootstrapCardContainer {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
+    
     width: 70vw;
     margin-top: 2rem;
     margin-left: 15vw;
@@ -242,13 +323,11 @@ button:hover {
 .accordion {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     width: 70vw;
-    /* margin-top: 2rem; */
     margin-left: 15vw;
 }
 
-.carousel {
+/* .carousel {
     height: 400px;
     width: 600px;
     display: flex;
@@ -260,18 +339,97 @@ button:hover {
 #carouselExampleIndicators {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    
     width: 70vw;
-    /* margin-top: 2rem; */
+    
     margin-left: 15vw;
-}
+} */
 
 .btn {
-    height: 2rem;
+    height: 2.5rem;
+    justify-content: center;
 }
 
-/* w3schools Download Button CSS */
 
+
+
+
+/* Gallery Grid CSS */
+#galleryGridLikely {
+    /* height: 36vh; */
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 12vw 12vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "leftHero noodles1 noodles2"
+    "leftHero longProtos longProtos";
+}
+#leftHero {
+    grid-area: leftHero;
+    background-image: url("../images/01.likely-leftHero.png");
+}
+#noodles1 {
+    grid-area: noodles1;
+    background-image: url("../images/02.likely-noodles1.png");
+} 
+#noodles2 {
+    grid-area: noodles2;
+    background-image: url("../images/03.likely-noodles2.png");
+} 
+#longProtos {
+    grid-area: longProtos;
+    background-image: url("../images/04.likely-longProtos.png");
+}
+
+
+
+
+.categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+
+
+
+/* #galleryGridBP4VK {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas:
+    "bookcases bedroom patio"
+    "couches couches patio";
+}
+
+#bookcases {
+    grid-area: bookcases;
+    background-image: url("../images/bookcases@2x.png");
+  
+}
+#bedroom {
+    grid-area: bedroom;
+    background-image: url("../images/beds@2x.png");
+} 
+#couches {
+    grid-area: couches;
+    background-image: url("../images/couch@2x.png");
+} 
+#patio {
+    grid-area: patio;
+    background-image: url("../images/patio@2x.png");
+} */
+
+
+
+
+/* w3schools Download Button CSS */
 .btnDL {
     background-color: rgb(185, 202, 224);
     /* background-image: linear-gradient(to bottom right, #D25A9B22, #74CFDB22) */
@@ -279,13 +437,16 @@ button:hover {
     color: white;
     padding: 12px 30px;
     cursor: pointer;
-    font-size: 20px;
     align-items: center;
     margin-left: 25vw;
     /* height: 4rem; */
-    height: 8vh;
+    height: 16vh;
     border-radius: 25px;
-  }
+}
+.dlWords {
+    color: black;
+    font-size: 20px;
+}
   
 /* Darker background on mouse-over */
 .btnDL:hover {
@@ -293,8 +454,11 @@ button:hover {
 }
 
 
-/* CUSTOM MEDIA QUERIES */
 
+
+
+
+/* CUSTOM MEDIA QUERIES */
 @media only screen and (max-width: 908px) {
     .headerhalfBottom {
         visibility: hidden;
@@ -424,5 +588,3 @@ button:hover {
     }
     
 }
-
-
